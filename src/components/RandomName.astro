@@ -2,10 +2,11 @@
 import { sleep } from "../utils/sleep";
 
 const personResponse = await fetch("https://randomuser.me/api/");
+const personResponse2 = await fetch("https://randomuser.me/api/");
+const personResponse3 = await fetch("https://randomuser.me/api/");
+const personResponse4 = await fetch("https://randomuser.me/api/");
 const personData = await personResponse.json();
 const randomPerson = personData.results[0];
-
-await sleep(5000);
 ---
 
 <p>{randomPerson.name.first}</p>
