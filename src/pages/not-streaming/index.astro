@@ -1,0 +1,19 @@
+---
+const personResponse = await fetch("https://randomuser.me/api/");
+const personData = await personResponse.json();
+const randomPerson = personData.results[0];
+const factResponse = await fetch("https://catfact.ninja/fact");
+const factData = await factResponse.json();
+---
+
+<html>
+  <head>
+    <title>A name and a fact</title>
+  </head>
+  <body>
+    <h2>A name</h2>
+    <p>{randomPerson.name.first}</p>
+    <h2>A fact</h2>
+    <p>{factData.fact}</p>
+  </body>
+</html>
