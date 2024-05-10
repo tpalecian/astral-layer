@@ -1,7 +1,11 @@
 ---
+import { sleep } from "../utils/sleep";
+
 const personResponse = await fetch("https://randomuser.me/api/");
 const personData = await personResponse.json();
 const randomPerson = personData.results[0];
+
+await sleep(5000);
 ---
 
 <p>{randomPerson.name.first}</p>
